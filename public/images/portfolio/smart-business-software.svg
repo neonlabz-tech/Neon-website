@@ -1,0 +1,24 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="g1" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#7975FF" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#040114" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="accent1" x1="120" y1="80" x2="680" y2="370" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#7975FF" />
+      <stop offset="100%" stop-color="#C312FB" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" rx="24" fill="#050217" />
+  <rect width="800" height="450" rx="24" fill="url(#g1)" />
+  <g opacity="0.16" stroke="#FFFFFF" stroke-width="1">
+    <path d="M0 110H800M0 225H800M0 340H800M180 0V450M400 0V450M620 0V450" />
+  </g>
+  <rect x="130" y="90" width="540" height="270" rx="20" fill="#0C0726" stroke="rgba(255,255,255,0.16)" />
+  <rect x="162" y="122" width="160" height="24" rx="12" fill="url(#accent1)" fill-opacity="0.28" stroke="#7975FF" stroke-opacity="0.6" />
+  <rect x="162" y="170" width="215" height="150" rx="14" fill="#120B35" stroke="rgba(255,255,255,0.12)" />
+  <rect x="400" y="170" width="238" height="66" rx="14" fill="#120B35" stroke="rgba(255,255,255,0.12)" />
+  <rect x="400" y="254" width="238" height="66" rx="14" fill="#120B35" stroke="rgba(146,238,197,0.35)" />
+  <path d="M188 282L232 238L278 256L346 202" stroke="url(#accent1)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="346" cy="202" r="6" fill="#92EEC5" />
+</svg>

@@ -1,0 +1,19 @@
+<svg width="1440" height="240" viewBox="0 0 1440 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="beamGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E10AFA" stop-opacity="0.55" />
+      <stop offset="35%" stop-color="#6D3FEA" stop-opacity="0.45" />
+      <stop offset="75%" stop-color="#231446" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#020010" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="beamLine" x1="0" y1="120" x2="1440" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#020010" stop-opacity="0" />
+      <stop offset="25%" stop-color="#7975FF" stop-opacity="0.7" />
+      <stop offset="50%" stop-color="#E10AFA" stop-opacity="0.95" />
+      <stop offset="75%" stop-color="#8C2BFF" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#020010" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+  <ellipse cx="720" cy="120" rx="680" ry="90" fill="url(#beamGlow)" />
+  <rect x="0" y="119" width="1440" height="2" fill="url(#beamLine)" />
+</svg>
