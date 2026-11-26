@@ -50,4 +50,11 @@ export const CLIENT_LOGOS: ClientLogoItem[] = [
     width: 160,
     height: 240,
   },
+  {
+    id: "techna",
+    name: "Techna Technical Institute",
+    logoSrc: "/images/clients/techna.png",
+    width: 374,
+    height: 150,
+  },
 ];

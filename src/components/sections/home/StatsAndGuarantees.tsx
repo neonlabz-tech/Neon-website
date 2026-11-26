@@ -76,27 +76,50 @@ export function StatsAndGuarantees() {
       className="border-y border-[#0f0b24]/[0.06] bg-[#faf9fe] py-12 sm:py-16 lg:py-20"
     >
       <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-10 2xl:max-w-[1560px]">
-        <div className="stats-panel-surface relative overflow-hidden rounded-3xl px-6 py-12 sm:px-10 sm:py-16 lg:px-14 lg:py-20">
+        {/* Midnight Obsidian Master Card with Glowing Neon Highlights */}
+        <div className="dark relative overflow-hidden rounded-3xl border border-white/15 bg-[#09061a] bg-gradient-to-b from-[#09061a] via-[#120d31] to-[#1a1345] px-6 py-12 text-center text-white shadow-[0_28px_70px_-20px_rgba(15,11,36,0.5)] sm:px-10 sm:py-16 lg:px-14 lg:py-20">
+          {/* Top illuminated laser rail */}
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute top-0 left-1/2 h-px w-3/4 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#7975ff]/45 to-transparent"
+            className="pointer-events-none absolute top-0 left-1/2 h-[1.5px] w-3/4 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#c312fb]/70 to-transparent"
+          />
+
+          {/* Bottom subtle accent rail */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute bottom-0 left-1/2 h-[1px] w-2/3 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#7975ff]/40 to-transparent"
+          />
+
+          {/* Ambient cosmic plasma glow behind the card */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute top-1/2 left-1/2 h-[380px] w-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(140,43,255,0.22)_0%,rgba(109,63,234,0.12)_45%,transparent_70%)] blur-3xl will-change-transform"
           />
 
           <div className="relative z-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:gap-10 lg:grid-cols-4 lg:gap-8">
             {HOME_COMPANY_STATS.map((stat, index) => {
               const displayValue = formatStatValue(stat, progress);
               const finalValue = formatStatValue(stat, 1);
+              const isNotLast = index < HOME_COMPANY_STATS.length - 1;
 
               return (
                 <div
                   key={stat.id}
                   style={{ transitionDelay: `${index * 110}ms` }}
-                  className={`transition-all duration-700 ease-out ${
+                  className={`relative transition-all duration-700 ease-out ${
                     hasEntered
                       ? "translate-y-0 opacity-100"
                       : "translate-y-5 opacity-0"
                   }`}
                 >
+                  {/* Vertical subtle hairline divider on desktop */}
+                  {isNotLast ? (
+                    <div
+                      aria-hidden="true"
+                      className="pointer-events-none absolute -right-4 top-1/2 hidden h-20 w-px -translate-y-1/2 bg-gradient-to-b from-transparent via-white/12 to-transparent lg:block"
+                    />
+                  ) : null}
+
                   <div className="group flex flex-col items-center text-center transition-transform duration-300 ease-out hover:-translate-y-1">
                     <span className="sr-only">
                       {finalValue} {stat.label}
@@ -104,21 +127,23 @@ export function StatsAndGuarantees() {
 
                     <div
                       aria-hidden="true"
-                      className="relative text-4xl font-semibold tracking-[-0.03em] text-[#0f0b24] tabular-nums transition-transform duration-300 group-hover:scale-105 sm:text-6xl lg:text-7xl"
+                      className="relative text-4xl font-bold tracking-[-0.03em] text-white tabular-nums drop-shadow-[0_4px_24px_rgba(140,43,255,0.4)] transition-all duration-300 group-hover:scale-105 group-hover:bg-gradient-to-r group-hover:from-white group-hover:via-[#d7c9ff] group-hover:to-[#38bdf8] group-hover:bg-clip-text group-hover:text-transparent sm:text-6xl lg:text-7xl"
                     >
+                      {/* Localized radial aura behind number */}
                       <span
                         aria-hidden="true"
-                        className="pointer-events-none absolute inset-0 -z-10 scale-125 rounded-full bg-[#7048ff]/12 opacity-0 blur-2xl transition-opacity duration-300 group-hover:opacity-100"
+                        className="pointer-events-none absolute inset-0 -z-10 scale-150 rounded-full bg-gradient-to-tr from-[#7975ff]/30 via-[#c312fb]/25 to-transparent blur-2xl opacity-60 transition-opacity duration-300 group-hover:scale-175 group-hover:opacity-100"
                       />
                       {displayValue}
                     </div>
 
+                    {/* Luminous neon underline that expands on hover */}
                     <span
                       aria-hidden="true"
-                      className="mt-3 h-0.5 w-8 rounded-full bg-gradient-to-r from-[#7975ff] via-[#a492ed] to-[#e10afa] opacity-75 transition-all duration-300 group-hover:w-16 group-hover:opacity-100 sm:mt-4"
+                      className="mt-3 h-0.5 w-10 rounded-full bg-gradient-to-r from-[#7975ff] via-[#c312fb] to-[#e10afa] shadow-[0_0_14px_rgba(195,18,251,0.7)] transition-all duration-300 group-hover:w-20 sm:mt-4"
                     />
 
-                    <p className="mt-2.5 text-xs font-medium text-[#474269] sm:mt-3 sm:text-base">
+                    <p className="mt-2.5 text-xs font-medium text-white/75 transition-colors duration-300 group-hover:text-white sm:mt-3 sm:text-base">
                       {stat.label}
                     </p>
                   </div>

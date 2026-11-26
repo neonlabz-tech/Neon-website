@@ -12,8 +12,36 @@ export const ROUTES = {
 export const MAIN_NAV_LINKS = [
   { label: "Home", href: ROUTES.home, iconName: "home" },
   { label: "About", href: ROUTES.about, iconName: "sparkles" },
+  { label: "Services", href: ROUTES.services, iconName: "services" },
   { label: "Portfolio", href: ROUTES.portfolio, iconName: "folder" },
   { label: "Insights", href: ROUTES.blog, iconName: "book" },
+] as const;
+
+export const NAV_FEATURED_SERVICES = [
+  {
+    title: "Website Development",
+    description: "Fast, responsive corporate & CMS websites",
+    href: "/services/website-development",
+    iconName: "globe",
+  },
+  {
+    title: "Full-Stack Development",
+    description: "Scalable custom software, portals & APIs",
+    href: "/services/full-stack-development",
+    iconName: "layers",
+  },
+  {
+    title: "Mobile Applications",
+    description: "Cross-platform iOS & Android experiences",
+    href: "/services/mobile-applications",
+    iconName: "smartphone",
+  },
+  {
+    title: "UI/UX Design",
+    description: "Intuitive interfaces & scalable design systems",
+    href: "/services/ui-ux-design",
+    iconName: "palette",
+  },
 ] as const;
 
 export const FOOTER_NAVIGATE_LINKS = [

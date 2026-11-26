@@ -40,7 +40,7 @@ export default function ServicesPage() {
         <ServicesCatalogClient />
       </Suspense>
 
-      <section className="border-y border-[#0f0b24]/[0.06] bg-[#faf9fe] py-12 sm:py-16">
+      <section className="border-y border-[#0f0b24]/[0.06] bg-[#faf9fe] py-8 sm:py-10">
         <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-10 2xl:max-w-[1560px]">
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
             <div className="glass-card rounded-2xl p-6 sm:p-8">

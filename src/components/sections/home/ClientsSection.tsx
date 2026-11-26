@@ -2,14 +2,20 @@ import React from "react";
 import Image from "next/image";
 import { CLIENT_LOGOS } from "@/data/clients";
 
-const INNER_WHITE_LOGO_IDS = new Set(["tj-fashion-mall", "magnify"]);
+const INNER_WHITE_LOGO_IDS = new Set(["tj-fashion-mall", "magnify", "techna"]);
 
 function getLogoSizeClass(id: string, compact: boolean) {
   if (id === "templateza") {
     return compact ? "h-6 sm:h-7 lg:h-8" : "h-7 sm:h-8 lg:h-9";
   }
-  if (id === "magnify" || id === "jenthu-nails-bridal") {
+  if (id === "magnify") {
     return compact ? "h-7 sm:h-8 lg:h-9" : "h-8 sm:h-9 lg:h-10";
+  }
+  if (id === "jenthu-nails-bridal" || id === "ceylon-thamizhachi") {
+    return compact ? "h-10 sm:h-11 lg:h-13" : "h-12 sm:h-12 lg:h-13";
+  }
+  if (id === "eva-glowing-skin") {
+    return compact ? "h-14 sm:h-15 lg:h-16" : "h-15 sm:h-16 lg:h-18";
   }
   return compact ? "h-10 sm:h-11 lg:h-12" : "h-11 sm:h-12 lg:h-14";
 }
@@ -28,9 +34,8 @@ export function ClientsTrustCard({
       id={id}
       dir="ltr"
       aria-label="Our Esteemed Clients"
-      className={`relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent_0%,black_10%,black_90%,transparent_100%)] ${
-        compact ? "py-3 sm:py-4" : "py-4 sm:py-6"
-      }`}
+      className={`relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent_0%,black_10%,black_90%,transparent_100%)] ${compact ? "py-3 sm:py-4" : "py-4 sm:py-6"
+        }`}
     >
       <div className="flex w-max animate-clients-marquee items-center">
         {[0, 1].map((groupIndex) => (

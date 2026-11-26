@@ -6,20 +6,38 @@ import { usePathname } from "next/navigation";
 import {
   Home,
   Sparkles,
+  Layers,
   FolderGit2,
   BookOpen,
   Menu,
   X,
+  ChevronDown,
+  ArrowRight,
+  Globe,
+  Smartphone,
+  Palette,
 } from "lucide-react";
-import { MAIN_NAV_LINKS, ROUTES } from "@/constants/navigation";
+import {
+  MAIN_NAV_LINKS,
+  NAV_FEATURED_SERVICES,
+  ROUTES,
+} from "@/constants/navigation";
 import { BrandLogo } from "@/components/ui/BrandLogo";
 import { ActionPill } from "@/components/ui/ActionPill";
 
 const ICONS = {
   home: Home,
   sparkles: Sparkles,
+  services: Layers,
   folder: FolderGit2,
   book: BookOpen,
+} as const;
+
+const SERVICE_DROPDOWN_ICONS = {
+  globe: Globe,
+  layers: Layers,
+  smartphone: Smartphone,
+  palette: Palette,
 } as const;
 
 export function Navbar() {
@@ -28,6 +46,7 @@ export function Navbar() {
   const lastScrollYRef = useRef(0);
 
   const [openPath, setOpenPath] = useState<string | null>(null);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const [scrollState, setScrollState] = useState<{
     hidden: boolean;
     overHero: boolean;
@@ -43,6 +62,7 @@ export function Navbar() {
 
   const closeAllMenus = useCallback(() => {
     setOpenPath(null);
+    setServicesOpen(false);
   }, []);
 
   useEffect(() => {
@@ -165,6 +185,91 @@ export function Navbar() {
             {MAIN_NAV_LINKS.map((item) => {
               const Icon = ICONS[item.iconName];
               const active = isActive(item.href);
+
+              if (item.href === ROUTES.services) {
+                return (
+                  <div
+                    key={item.href}
+                    className="relative"
+                    onMouseEnter={() => setServicesOpen(true)}
+                    onMouseLeave={() => setServicesOpen(false)}
+                  >
+                    <Link
+                      href={item.href}
+                      onClick={closeAllMenus}
+                      aria-expanded={servicesOpen}
+                      aria-haspopup="true"
+                      className={`relative inline-flex items-center gap-2 rounded-full px-4 py-2 text-[13px] font-medium transition-all duration-200 ${
+                        active
+                          ? "ios-glass-tab-active text-[#4f28c9] dark:text-white"
+                          : "border border-transparent text-[#474269] hover:bg-[#0f0b24]/[0.05] hover:text-[#0f0b24] dark:text-white/90 dark:hover:bg-white/10 dark:hover:text-white"
+                      }`}
+                    >
+                      <Icon
+                        className={`h-3.5 w-3.5 ${
+                          active
+                            ? "text-[#6d3fea] dark:text-[#d7c9ff]"
+                            : "text-[#645e8a] dark:text-white/75"
+                        }`}
+                      />
+                      <span>{item.label}</span>
+                      <ChevronDown
+                        className={`h-3.5 w-3.5 transition-transform duration-200 ${
+                          servicesOpen ? "rotate-180" : ""
+                        }`}
+                      />
+                    </Link>
+
+                    <div
+                      className={`absolute top-full left-1/2 w-[360px] -translate-x-1/2 pt-3 transition-all duration-200 ${
+                        servicesOpen
+                          ? "pointer-events-auto translate-y-0 opacity-100"
+                          : "pointer-events-none -translate-y-1 opacity-0"
+                      }`}
+                    >
+                      <div className="rounded-2xl border border-[#0f0b24]/10 bg-white/95 p-2 shadow-[0_24px_60px_-16px_rgba(15,11,36,0.22)] backdrop-blur-2xl dark:border-white/15 dark:bg-[#120d31]/95 dark:shadow-[0_24px_60px_-16px_rgba(0,0,0,0.65)]">
+                        <div className="flex flex-col gap-1">
+                          {NAV_FEATURED_SERVICES.map((svc) => {
+                            const SvcIcon =
+                              SERVICE_DROPDOWN_ICONS[svc.iconName];
+                            return (
+                              <Link
+                                key={svc.href}
+                                href={svc.href}
+                                onClick={closeAllMenus}
+                                className="group flex items-start gap-3 rounded-xl p-2.5 transition-colors hover:bg-[#6d3fea]/[0.07] dark:hover:bg-white/[0.08]"
+                              >
+                                <span className="mt-0.5 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-[#6d3fea]/20 bg-[#6d3fea]/10 text-[#6d3fea] transition-colors group-hover:bg-[#6d3fea] group-hover:text-white dark:border-white/15 dark:bg-white/10 dark:text-[#d7c9ff] dark:group-hover:bg-[#6d3fea] dark:group-hover:text-white">
+                                  <SvcIcon className="h-4 w-4" />
+                                </span>
+                                <span className="min-w-0">
+                                  <span className="block text-[13px] font-semibold text-[#0f0b24] transition-colors group-hover:text-[#5b2ee0] dark:text-white dark:group-hover:text-[#d7c9ff]">
+                                    {svc.title}
+                                  </span>
+                                  <span className="block truncate text-xs text-[#645e8a] dark:text-white/65">
+                                    {svc.description}
+                                  </span>
+                                </span>
+                              </Link>
+                            );
+                          })}
+                        </div>
+
+                        <div className="mt-2 border-t border-[#0f0b24]/10 pt-2 dark:border-white/10">
+                          <Link
+                            href={ROUTES.services}
+                            onClick={closeAllMenus}
+                            className="group flex items-center justify-between rounded-xl px-3 py-2 text-xs font-semibold text-[#5b2ee0] transition-colors hover:bg-[#6d3fea]/[0.08] dark:text-[#d7c9ff] dark:hover:bg-white/[0.08]"
+                          >
+                            <span>Complete Service Directory</span>
+                            <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-1" />
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
 
               return (
                 <Link

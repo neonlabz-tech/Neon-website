@@ -7,6 +7,7 @@ import { CapabilitiesMarquee } from "@/components/sections/home/CapabilitiesMarq
 import { StatsAndGuarantees } from "@/components/sections/home/StatsAndGuarantees";
 import { ProcessOrbitalSection } from "@/components/sections/home/ProcessOrbitalSection";
 import { PortfolioShowcaseSection } from "@/components/sections/home/PortfolioShowcaseSection";
+import { TestimonialsSection } from "@/components/sections/home/TestimonialsSection";
 import { WhyChooseRadialSection } from "@/components/sections/home/WhyChooseRadialSection";
 import { FaqAccordionSection } from "@/components/sections/home/FaqAccordionSection";
 import { CtaConnectBanner } from "@/components/sections/shared/CtaConnectBanner";
@@ -22,6 +23,7 @@ export default function HomePage() {
       <ProcessOrbitalSection />
       <StatsAndGuarantees />
       <PortfolioShowcaseSection />
+      <TestimonialsSection />
       <WhyChooseRadialSection />
       <FaqAccordionSection />
       <CtaConnectBanner />

@@ -91,13 +91,17 @@ export function ProcessOrbitalSection() {
     <section
       id="process"
       ref={sectionRef}
-      className="relative h-[260vh] bg-white py-0 lg:h-[290vh]"
+      className="dark relative h-[260vh] bg-gradient-to-b from-[#09061a] via-[#0e0926] to-[#120d31] py-0 text-white lg:h-[290vh]"
     >
-      <div className="sticky top-0 flex min-h-dvh flex-col justify-center pt-[68px] pb-3 sm:pt-20 sm:pb-8 lg:min-h-screen lg:py-14">
-        <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-10 2xl:max-w-[1560px]">
+      <div className="sticky top-0 flex min-h-dvh flex-col justify-center overflow-hidden pt-[68px] pb-3 sm:pt-20 sm:pb-8 lg:min-h-screen lg:py-14">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute top-1/2 left-1/2 h-[540px] w-[780px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(109,63,234,0.2)_0%,rgba(140,43,255,0.08)_46%,transparent_72%)] blur-3xl"
+        />
+        <div className="relative z-10 mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-10 2xl:max-w-[1560px]">
           <div className="text-center">
             <Eyebrow label="OUR WORK PROCESS" />
-            <h2 className="mx-auto mt-2.5 max-w-2xl text-2xl leading-[1.15] font-bold tracking-[-0.03em] text-[#0f0b24] sm:mt-5 sm:text-4xl lg:text-5xl">
+            <h2 className="mx-auto mt-2.5 max-w-2xl text-2xl leading-[1.15] font-bold tracking-[-0.03em] text-white sm:mt-5 sm:text-4xl lg:text-5xl">
               From Idea to{" "}
               <span className="neon-gradient-text">Production</span> in Four Clear
               Steps
@@ -108,9 +112,9 @@ export function ProcessOrbitalSection() {
             {/* Orbital Progress Hub (Pinned cleanly on mobile & desktop) */}
             <div className="flex flex-col items-center justify-center lg:col-span-4 lg:col-start-5 lg:row-span-2 lg:row-start-1">
               <div className="relative flex h-44 w-44 items-center justify-center min-[390px]:h-52 min-[390px]:w-52 sm:h-72 sm:w-72 lg:h-80 lg:w-80">
-                <div className="absolute inset-0 rounded-full border border-[#0f0b24]/10" />
-                <div className="animate-orbit-slow absolute inset-5 rounded-full border border-dashed border-[#6d3fea]/30 sm:inset-8 lg:inset-9" />
-                <div className="absolute inset-7 rounded-full bg-[radial-gradient(circle,rgba(109,63,234,0.12)_0%,rgba(195,18,251,0.05)_65%,transparent_100%)] blur-md sm:inset-10 lg:inset-12" />
+                <div className="absolute inset-0 rounded-full border border-white/15" />
+                <div className="animate-orbit-slow absolute inset-5 rounded-full border border-dashed border-[#7975ff]/35 sm:inset-8 lg:inset-9" />
+                <div className="absolute inset-7 rounded-full bg-[radial-gradient(circle,rgba(109,63,234,0.28)_0%,rgba(195,18,251,0.12)_65%,transparent_100%)] blur-md sm:inset-10 lg:inset-12" />
 
                 {/* Clockwise glowing orbital progress arc (01 -> 02 -> 03 -> 04) */}
                 <svg
@@ -136,7 +140,7 @@ export function ProcessOrbitalSection() {
                     cy="160"
                     r={ORBIT_RING_RADIUS}
                     fill="none"
-                    stroke="rgba(121, 117, 255, 0.14)"
+                    stroke="rgba(255, 255, 255, 0.12)"
                     strokeWidth="2"
                   />
                   <circle
@@ -189,8 +193,8 @@ export function ProcessOrbitalSection() {
                       onClick={() => jumpToStep(node.idx)}
                       className={`absolute ${node.pos} z-10 flex h-7 w-7 items-center justify-center rounded-full font-mono text-[10.5px] font-semibold transition-all duration-300 min-[390px]:h-8 min-[390px]:w-8 sm:h-9 sm:w-9 sm:text-xs ${
                         isActive
-                          ? "scale-115 bg-gradient-to-br from-[#6d3fea] to-[#9333ea] text-white shadow-[0_8px_20px_-4px_rgba(109,63,234,0.48)]"
-                          : "ios-glass-btn text-[#474269] hover:text-[#0f0b24]"
+                          ? "scale-115 bg-gradient-to-br from-[#6d3fea] to-[#9333ea] text-white shadow-[0_0_20px_rgba(195,18,251,0.65)]"
+                          : "ios-glass-btn text-white/75 hover:text-white"
                       }`}
                     >
                       {PROCESS_STEPS[node.idx].step}
@@ -212,7 +216,7 @@ export function ProcessOrbitalSection() {
                     className={`h-2 rounded-full transition-all duration-300 ${
                       activeStep === idx
                         ? "w-7 bg-gradient-to-r from-[#7975ff] via-[#c312fb] to-[#e10afa] shadow-[0_4px_12px_rgba(195,18,251,0.45)]"
-                        : "w-2 bg-[#0f0b24]/15 hover:bg-[#0f0b24]/35"
+                        : "w-2 bg-white/20 hover:bg-white/40"
                     }`}
                   />
                 ))}
@@ -251,20 +255,20 @@ export function ProcessOrbitalSection() {
                         onClick={() => jumpToStep(stepIdx)}
                         className={`relative col-start-1 row-start-1 w-full rounded-2xl p-4 text-left transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] sm:p-5 ${cardMotionClass} ${
                           isActive
-                            ? "border-2 border-[#7c3aed] bg-gradient-to-br from-white via-[#f5f0ff] to-[#ebe2ff] shadow-[0_0_0_2px_rgba(121,117,255,0.28),0_0_26px_rgba(109,63,234,0.42),0_0_46px_-4px_rgba(195,18,251,0.48)]"
+                            ? "border-2 border-[#9333ea]/80 bg-gradient-to-br from-[#1b1442] via-[#150f35] to-[#231754] shadow-[0_0_0_1px_rgba(121,117,255,0.35),0_0_26px_rgba(109,63,234,0.48),0_0_46px_-4px_rgba(195,18,251,0.45)]"
                             : "glass-card"
                         }`}
                       >
                         <div
                           className={`border-b border-dashed pb-2 text-xs font-semibold uppercase tracking-[0.16em] ${
                             isActive
-                              ? "border-[#6d3fea]/35 text-[#4f28c9]"
-                              : "border-[#0f0b24]/15 text-[#0f0b24]"
+                              ? "border-[#7975ff]/40 text-[#d8b4fe]"
+                              : "border-white/15 text-white/90"
                           }`}
                         >
                           {item.title}
                         </div>
-                        <p className="mt-2 text-sm leading-relaxed text-[#474269]">
+                        <p className="mt-2 text-sm leading-relaxed text-white/75">
                           {item.description}
                         </p>
                       </button>
@@ -287,20 +291,20 @@ export function ProcessOrbitalSection() {
                   onClick={() => jumpToStep(stepIdx)}
                   className={`relative w-full rounded-2xl p-5 text-left transition-all duration-300 sm:p-6 ${DESKTOP_STEP_GRID_CLASSES[stepIdx]} ${
                     active
-                      ? "z-10 scale-[1.015] border-2 border-[#7c3aed] bg-gradient-to-br from-white via-[#f5f0ff] to-[#ebe2ff] shadow-[0_0_0_2px_rgba(121,117,255,0.3),0_0_28px_rgba(109,63,234,0.44),0_0_52px_-4px_rgba(195,18,251,0.5)]"
-                      : "glass-card opacity-75 hover:border-[#6d3fea]/40 hover:opacity-100"
+                      ? "z-10 scale-[1.015] border-2 border-[#9333ea]/80 bg-gradient-to-br from-[#1b1442] via-[#150f35] to-[#231754] shadow-[0_0_0_1px_rgba(121,117,255,0.35),0_0_28px_rgba(109,63,234,0.5),0_0_52px_-4px_rgba(195,18,251,0.45)]"
+                      : "glass-card opacity-80 hover:border-[#7975ff]/45 hover:opacity-100"
                   }`}
                 >
                   <div
                     className={`border-b border-dashed pb-3 text-xs font-semibold uppercase tracking-[0.16em] ${
                       active
-                        ? "border-[#6d3fea]/35 text-[#4f28c9]"
-                        : "border-[#0f0b24]/15 text-[#0f0b24]"
+                        ? "border-[#7975ff]/40 text-[#d8b4fe]"
+                        : "border-white/15 text-white/90"
                     }`}
                   >
                     {item.title}
                   </div>
-                  <p className="mt-3 text-sm leading-relaxed text-[#474269]">
+                  <p className="mt-3 text-sm leading-relaxed text-white/75">
                     {item.description}
                   </p>
                 </button>

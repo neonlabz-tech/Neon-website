@@ -170,165 +170,31 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     accent: "#6d3fea",
   },
   {
-    slug: "smart-business-software-solutions",
-    title: "Smart Business Software Solutions",
-    category: "Custom Software Development",
-    projectTitle: "Advanced Business Software System",
+    slug: "techna-technical-institute",
+    title: "Techna Technical Institute",
+    category: "Education & Web Platform",
+    projectTitle: "Techna Technical Institute — A/L Technology Stream Platform",
     tagline:
-      "Custom workflow automation and unified business operations platform.",
+      "Modern academic portal for Sri Lanka's A/L Technology stream featuring 7 core subjects, top achievers, and student registration.",
     overview:
-      "Engineered a tailored business operations platform uniting internal workflows, reporting, and team permissions so growing teams can replace fragmented spreadsheets with a single reliable system.",
-    image: "/images/portfolio/smart-business-software.svg",
+      "Designed and engineered the digital platform for Techna Technical Institute in Jaffna, Sri Lanka—presenting G.C.E. Advanced Level Technology stream programs across 7 core subjects alongside top achiever showcases, student testimonials, and streamlined online registration & WhatsApp support.",
+    image: "/images/portfolio/techna-hero.png",
+    liveUrl: "https://www.techna.lk/",
     whatWeDid: [
-      "Mapped operational workflows and designed custom ERP/CRM modules",
-      "Built role-based dashboards with automated task & status tracking",
-      "Implemented secure cloud hosting and automated data backups",
+      "Built a dynamic academic web platform with dedicated Home, Subjects, Contact, Login, and Student Registration flows",
+      "Highlighted key institute milestones (6+ years, 7 core subjects, 700+ students, 98% pass rate) and interactive program cards",
+      "Integrated Top Achievers result showcases, a student testimonial carousel, and instant WhatsApp enquiry support",
     ],
     results: [
-      "Reduced manual administrative workload across daily operations",
-      "Improved cross-team visibility with real-time operational reporting",
-      "Delivered a scalable codebase ready for multi-department expansion",
+      "Positioned Techna as a leading digital-first A/L Technology education hub in Northern Sri Lanka",
+      "Simplified subject discovery across Engineering Technology, Bio Systems Technology, SFT, ICT, and more",
+      "Faster prospective student enquiries and online registrations via integrated Apply Now and WhatsApp channels",
     ],
     metrics: [
-      { label: "Delivery Focus", value: "Automation" },
-      { label: "Architecture", value: "Modular ERP" },
-      { label: "Reliability", value: "98% Success" },
-    ],
-    accent: "#7975FF",
-  },
-  {
-    slug: "powerful-ecommerce-platforms",
-    title: "Powerful E-Commerce Platforms",
-    category: "E-Commerce Solutions",
-    projectTitle: "Modern E-Commerce Platform",
-    tagline:
-      "Responsive online storefront with payment integration and inventory control.",
-    overview:
-      "Created a conversion-focused e-commerce platform combining fast product discovery, seamless payment gateway integration, and streamlined order & catalog management.",
-    image: "/images/portfolio/ecommerce-platforms.svg",
-    whatWeDid: [
-      "Designed a mobile-first shopping and checkout flow",
-      "Integrated secure payment gateways and order status notifications",
-      "Built inventory, pricing, and product catalog management tools",
-    ],
-    results: [
-      "Faster mobile browsing and smoother checkout completion",
-      "Centralized inventory tracking reducing fulfillment errors",
-      "SEO-ready storefront structure built for organic growth",
-    ],
-    metrics: [
-      { label: "Checkout Flow", value: "Frictionless" },
-      { label: "Payments", value: "Verified" },
-      { label: "Experience", value: "Mobile-First" },
-    ],
-    accent: "#8C2BFF",
-  },
-  {
-    slug: "scalable-mobile-app-solutions",
-    title: "Scalable Mobile App Solutions",
-    category: "Mobile App Development",
-    projectTitle: "Smart Mobile Application Solution",
-    tagline:
-      "Cross-platform mobile application built for speed and intuitive daily use.",
-    overview:
-      "Developed a responsive cross-platform mobile experience engineered for smooth navigation, real-time API synchronization, and reliable performance across devices.",
-    image: "/images/portfolio/scalable-mobile-apps.svg",
-    whatWeDid: [
-      "Designed intuitive mobile user journeys and clean dark/light interfaces",
-      "Built cross-platform mobile modules connected to scalable cloud APIs",
-      "Optimized startup speed, responsiveness, and offline resilience",
-    ],
-    results: [
-      "Consistent user experience across modern iOS and Android devices",
-      "Streamlined user onboarding and faster in-app task completion",
-      "Foundation ready for rapid feature iteration",
-    ],
-    metrics: [
-      { label: "Platforms", value: "iOS & Android" },
-      { label: "Sync", value: "Real-Time API" },
-      { label: "Quality", value: "QA Verified" },
-    ],
-    accent: "#9b76ff",
-  },
-  {
-    slug: "creative-branding-ui-ux-design",
-    title: "Creative Branding & UI/UX Design",
-    category: "Branding & UI/UX Design",
-    projectTitle: "Creative Brand Identity Design",
-    tagline:
-      "Cohesive visual identity, brand guidelines, and digital product UI/UX.",
-    overview:
-      "Crafted a complete brand identity and UI/UX design system designed to establish instant credibility, visual clarity, and memorable digital touchpoints.",
-    image: "/images/portfolio/branding-ui-ux.svg",
-    whatWeDid: [
-      "Developed logo systems, typography hierarchies, and color tokens",
-      "Created interactive wireframes and high-fidelity UI prototypes",
-      "Delivered reusable component guidelines for engineering handoff",
-    ],
-    results: [
-      "Unified brand presence across web, mobile, and marketing channels",
-      "Faster development handoff through structured design systems",
-      "Stronger user engagement and visual differentiation",
-    ],
-    metrics: [
-      { label: "Deliverable", value: "Design System" },
-      { label: "Brand Clarity", value: "Unified" },
-      { label: "Usability", value: "User-Tested" },
-    ],
-    accent: "#C312FB",
-  },
-  {
-    slug: "reliable-software-testing-services",
-    title: "Reliable Software Testing Services",
-    category: "QA & Testing",
-    projectTitle: "Software Quality Assurance Testing",
-    tagline:
-      "Comprehensive QA testing covering stability, security, and performance.",
-    overview:
-      "Executed structured manual and cross-platform quality assurance testing to catch edge-case defects, validate security posture, and verify production performance before launch.",
-    image: "/images/portfolio/software-qa-testing.svg",
-    whatWeDid: [
-      "Authored end-to-end test plans covering core user flows and edge cases",
-      "Conducted cross-browser, responsive, and performance bottleneck checks",
-      "Verified bug fixes and release stability across staging builds",
-    ],
-    results: [
-      "Higher release confidence with critical defects resolved pre-launch",
-      "Consistent UI and functional stability across desktop and mobile",
-      "Reduced post-release support interruptions",
-    ],
-    metrics: [
-      { label: "Coverage", value: "End-to-End" },
-      { label: "Stability", value: "98% Target" },
-      { label: "Checks", value: "Cross-Device" },
+      { label: "Students", value: "700+ Enrolled" },
+      { label: "Curriculum", value: "7 Core Subjects" },
+      { label: "Pass Rate", value: "98% Achieved" },
     ],
     accent: "#6d3fea",
-  },
-  {
-    slug: "result-driven-digital-marketing",
-    title: "Result-Driven Digital Marketing Solutions",
-    category: "Digital Marketing Solutions",
-    projectTitle: "Performance Marketing Campaign",
-    tagline:
-      "SEO, social campaigns, paid ads, and analytics built to drive leads.",
-    overview:
-      "Planned and executed a multi-channel digital marketing strategy combining search optimization, targeted social media campaigns, and paid acquisition to grow qualified business leads.",
-    image: "/images/portfolio/digital-marketing.svg",
-    whatWeDid: [
-      "Implemented technical SEO improvements and keyword-aligned landing pages",
-      "Launched targeted social media content and paid advertising funnels",
-      "Tracked conversion performance and refined campaign targeting",
-    ],
-    results: [
-      "Stronger organic search visibility and consistent lead generation",
-      "Improved campaign ROI through data-backed audience refinement",
-      "Cohesive digital presence supporting sales conversations",
-    ],
-    metrics: [
-      { label: "Channels", value: "SEO & Paid" },
-      { label: "Focus", value: "Lead Growth" },
-      { label: "Tracking", value: "Data-Driven" },
-    ],
-    accent: "#E10AFA",
   },
 ];

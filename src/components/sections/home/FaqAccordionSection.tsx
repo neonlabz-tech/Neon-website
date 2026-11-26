@@ -26,22 +26,13 @@ export function FaqAccordionSection() {
           </h2>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 items-start gap-3.5 sm:mt-12 md:grid-cols-2 md:gap-4">
+        <div className="mt-10 grid grid-cols-1 items-start gap-3.5 sm:mt-12 md:grid-flow-dense md:grid-cols-2 md:gap-4">
           {FAQS.map((faq, idx) => {
             const isOpen = openIndex === idx;
-            const desktopOrder =
-              openIndex !== null && openIndex % 2 === 1
-                ? idx === openIndex
-                  ? openIndex - 1
-                  : idx === openIndex - 1
-                    ? openIndex
-                    : idx
-                : idx;
             return (
               <div
                 key={faq.question}
-                style={{ "--faq-order": desktopOrder } as React.CSSProperties}
-                className={`rounded-2xl border transition-all duration-300 md:[order:var(--faq-order)] ${
+                className={`rounded-2xl border transition-all duration-300 ${
                   isOpen
                     ? "border-[#6d3fea]/35 bg-[#faf9fe] shadow-[0_14px_34px_-12px_rgba(109,63,234,0.14)] md:col-span-2"
                     : "border-[#0f0b24]/[0.08] bg-white shadow-[0_12px_32px_-12px_rgba(15,11,36,0.08)] hover:border-[#0f0b24]/20"
@@ -51,7 +42,7 @@ export function FaqAccordionSection() {
                   type="button"
                   aria-expanded={isOpen}
                   onClick={() => toggleFaq(idx)}
-                  className="flex min-h-[72px] w-full cursor-pointer items-center justify-between gap-4 px-5 py-4 text-left sm:px-6 sm:py-5"
+                  className="flex min-h-[72px] w-full cursor-pointer items-center justify-between gap-4 rounded-2xl px-5 py-4 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6d3fea]/45 sm:px-6 sm:py-5"
                 >
                   <span className="text-sm font-medium text-[#0f0b24] sm:text-base">
                     {faq.question}

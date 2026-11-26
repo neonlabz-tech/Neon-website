@@ -456,9 +456,9 @@
 .neon-gradient-text {
   background: linear-gradient(
     95deg,
-    #5b21b6 0%,
-    #a21caf 50%,
-    #0284c7 100%
+    #3b1682 0%,
+    #6d3fea 50%,
+    #8c2bff 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -468,9 +468,9 @@
 .dark .neon-gradient-text {
   background: linear-gradient(
     95deg,
-    #a78bfa 0%,
-    #e879f9 48%,
-    #38bdf8 100%
+    #6d3fea 0%,
+    #8c2bff 50%,
+    #c084fc 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -488,7 +488,7 @@
 }
 
 .animate-marquee {
-  animation: marquee-scroll 30s linear infinite;
+  animation: marquee-scroll 75s linear infinite;
   will-change: transform;
 }
 

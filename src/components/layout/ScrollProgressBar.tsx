@@ -56,7 +56,7 @@ export function ScrollProgressBar() {
       <div
         ref={barRef}
         style={{ transform: "scaleX(0)" }}
-        className="h-full w-full origin-left bg-gradient-to-r from-[#6d3fea] via-[#c312fb] to-[#0ea5e9] shadow-[0_0_8px_rgba(109,63,234,0.35)] will-change-transform dark:from-[#8b5cf6] dark:via-[#e879f9] dark:to-[#38bdf8] dark:shadow-[0_0_12px_rgba(168,85,247,0.65)]"
+        className="h-full w-full origin-left bg-gradient-to-r from-[#3b1682] via-[#6d3fea] to-[#8c2bff] shadow-[0_0_8px_rgba(109,63,234,0.35)] will-change-transform dark:from-[#6d3fea] dark:via-[#8c2bff] dark:to-[#c084fc] dark:shadow-[0_0_12px_rgba(140,43,255,0.65)]"
       />
     </div>
   );

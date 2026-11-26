@@ -21,7 +21,6 @@ import {
 import { ROUTES } from "@/constants/navigation";
 import { CORE_SERVICES, SERVICE_CATEGORIES } from "@/data/services";
 import type { ServiceCategory } from "@/types";
-import { Eyebrow } from "@/components/ui/Eyebrow";
 
 const useIsomorphicLayoutEffect =
   typeof window !== "undefined" ? useLayoutEffect : useEffect;
@@ -382,22 +381,15 @@ export function ServicesCatalogClient() {
           </div>
         </div>
 
-        {/* Active Category Heading & Context */}
+        {/* Active Category Panel */}
         <div
           id={`services-panel-${activeCategoryMeta.id}`}
           role="tabpanel"
           aria-labelledby={`services-tab-${activeCategoryMeta.id}`}
           className="mt-7 sm:mt-8"
         >
-          <div className="mx-auto max-w-3xl text-center">
-            <Eyebrow label={activeCategoryMeta.eyebrow} />
-            <h2 className="mt-3 text-2xl font-semibold tracking-[-0.03em] text-[#0f0b24] sm:mt-4 sm:text-3xl lg:text-4xl">
-              {activeCategoryMeta.heading}
-            </h2>
-          </div>
-
           {/* Sticky Scroll Runway: Keeps deck stacked until reached, then opens all cards as you scroll */}
-          <div ref={runwayRef} className="relative mt-6 sm:mt-10">
+          <div ref={runwayRef} className="relative">
             <div className="sticky top-[68px] sm:top-20 md:top-[88px]">
               <div ref={gridWrapperRef} className="relative">
                 <div

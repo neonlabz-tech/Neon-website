@@ -29,6 +29,307 @@ export const SERVICE_CATEGORIES: ServiceCategoryMeta[] = [
 
 export const CORE_SERVICES: ServiceItem[] = [
   {
+    id: "website-dev",
+    slug: "website-development",
+    category: "it-solutions",
+    title: "Website Development",
+    shortTitle: "Web Dev",
+    eyebrow: "CUSTOM WEB PLATFORMS",
+    headline: "Fast, Responsive Websites Built for Growth",
+    heroSubheadline:
+      "From conversion-focused corporate websites and WordPress solutions to high-performance custom React & Next.js platforms, we build fast, accessible web experiences that engage visitors and convert.",
+    description:
+      "Fast, responsive websites that build trust, engage visitors and drive real business growth with modern design and speed.",
+    image: "/images/services/mobile-web.jpg",
+    highlights: [
+      "High-performance responsive websites tailored for business growth",
+      "WordPress, Elementor, and custom Next.js architectures",
+      "Conversion-optimized landing pages and fast load speeds",
+    ],
+    deliverables: [
+      "Custom responsive website architecture & development",
+      "WordPress / Headless CMS content management integration",
+      "Core Web Vitals & technical SEO optimization",
+      "Contact forms, WhatsApp integrations & analytics setup",
+    ],
+    techTags: ["WordPress", "Elementor", "React", "Next.js", "Tailwind CSS", "TypeScript"],
+    biggerPictureEyebrow: "THE BIGGER PICTURE",
+    biggerPictureTitle: "Websites Engineered to Convert Visitors Into Customers",
+    biggerPictureBody:
+      "A great website is your company's strongest digital ambassador. We blend clean layout hierarchy, lightning-fast performance, and accessible responsive design to ensure your audience finds information effortlessly and takes action with complete confidence.",
+    offeringsTitle: "What We Build",
+    offerings: [
+      {
+        title: "Front-End & Corporate Websites",
+        summary:
+          "Clean, accessible interfaces built for instant responsiveness, search discoverability, and clear user journeys across every screen.",
+        points: [
+          "Next.js & React web platforms with server-side rendering",
+          "Mobile-first layouts with accessible typography",
+          "Fast page transitions and smooth micro-interactions",
+        ],
+      },
+      {
+        title: "WordPress & CMS Handover",
+        summary:
+          "Manageable publishing workflows and clean technical documentation so internal teams can update key pages effortlessly.",
+        points: [
+          "Custom WordPress and Elementor workflows for easy in-house editing",
+          "Structured content models tailored for marketing teams",
+          "Secure plugin ecosystems and automated backups",
+        ],
+      },
+      {
+        title: "High-Converting Landing Pages",
+        summary:
+          "Targeted promotional and campaign landing pages designed to drive inquiries, demo bookings, and sales conversions.",
+        points: [
+          "Lead capture forms and 1-click WhatsApp deep links",
+          "Clear call-to-action hierarchies and social proof blocks",
+          "A/B test ready structure for campaign traffic",
+        ],
+      },
+      {
+        title: "Speed & Technical SEO",
+        summary:
+          "Fine-tuned Core Web Vitals, semantic markup, and metadata architecture to rank higher on search engines.",
+        points: [
+          "Sub-second page loads tuned for Google Core Web Vitals",
+          "Semantic HTML5 and structured JSON-LD schema",
+          "Compressed image pipelines and clean bundle sizing",
+        ],
+      },
+    ],
+    advantages: [
+      {
+        title: "Performance-First Speed",
+        description:
+          "Optimized bundles and edge caching keep your site responsive on every mobile and desktop connection.",
+      },
+      {
+        title: "Effortless Content Handover",
+        description:
+          "We provide straightforward CMS controls and walkthrough documentation so your team can publish updates smoothly.",
+      },
+      {
+        title: "Built for Conversion",
+        description:
+          "Strategic layout choices and prominent touchpoints guide visitors directly toward inquiries and sales.",
+      },
+      {
+        title: "Dedicated SLA Support",
+        description:
+          "Ongoing maintenance, dependency updates, and security monitoring keep your website dependable.",
+      },
+    ],
+    relatedPortfolioSlugs: [
+      "magnify-creations",
+      "templateza",
+      "ceylon-thamizhachi",
+    ],
+    diagramType: "apps",
+  },
+  {
+    id: "fullstack-dev",
+    slug: "full-stack-development",
+    category: "it-solutions",
+    title: "Full-Stack Development",
+    shortTitle: "Full-Stack",
+    eyebrow: "SYSTEMS & BACK-END",
+    headline: "Scalable Applications & Digital Systems",
+    heroSubheadline:
+      "Engineered back-end architectures, secure relational databases, and interactive web portals built for business reliability, security, and long-term scalability.",
+    description:
+      "Scalable applications and digital systems engineered for performance, security, and seamless day-to-day business operations.",
+    image: "/images/services/saas.jpg",
+    highlights: [
+      "Scalable full-stack application architecture",
+      "Role-based authentication & data security",
+      "Custom client portals, dashboards & API webhooks",
+    ],
+    deliverables: [
+      "Full-stack web application & portal development",
+      "Relational database modeling with PostgreSQL & Supabase",
+      "REST & GraphQL API design with third-party webhooks",
+      "Role-based access control (RBAC) & user account portals",
+    ],
+    techTags: ["Next.js", "Node.js", "Supabase", "PostgreSQL", "Prisma", "TypeScript"],
+    biggerPictureEyebrow: "THE BIGGER PICTURE",
+    biggerPictureTitle: "Unifying Data, Logic & Business Workflows",
+    biggerPictureBody:
+      "Modern businesses require software that connects user interfaces with resilient back-end foundations. We architect full-stack platforms where data integrity, user permissions, and background automation work together flawlessly so your operations run without bottlenecks.",
+    offeringsTitle: "What We Build",
+    offerings: [
+      {
+        title: "Back-End & Database Architecture",
+        summary:
+          "Secure server-side logic, relational database modeling, and modular APIs powering portals, bookings, and customer dashboards.",
+        points: [
+          "PostgreSQL & Supabase data modeling with strict validation",
+          "High-performance Node.js & Next.js server actions",
+          "Automated database migrations and secure backups",
+        ],
+      },
+      {
+        title: "Client Portals & Admin Dashboards",
+        summary:
+          "High-clarity product interfaces that transform complex datasets into actionable insights and effortless daily tasks.",
+        points: [
+          "Role-based permissions for staff, clients, and admins",
+          "Interactive data tables with search, filtering, and exports",
+          "Clean user onboarding and activity audit logs",
+        ],
+      },
+      {
+        title: "API Integration & Webhooks",
+        summary:
+          "Asynchronous workers and partner-facing webhooks that handle heavy automation cleanly without blocking users.",
+        points: [
+          "Secure REST API endpoints with rate limiting",
+          "Payment gateway integration (Stripe, local payment processors)",
+          "Third-party service bridges and automated notifications",
+        ],
+      },
+      {
+        title: "Automated Workflows & Jobs",
+        summary:
+          "Reliable background processing, queued tasks, and event pipelines ensuring sub-second response times.",
+        points: [
+          "Scheduled background tasks and batch email queues",
+          "File upload pipelines and cloud asset optimization",
+          "Real-time updates via WebSockets and event triggers",
+        ],
+      },
+    ],
+    advantages: [
+      {
+        title: "Rock-Solid Architecture",
+        description:
+          "Typed TypeScript across front and back ensures minimal runtime bugs and predictable code maintenance.",
+      },
+      {
+        title: "Strict Data Protection",
+        description:
+          "Encrypted transport, scoped user roles, and parameterized queries protect company records.",
+      },
+      {
+        title: "Built to Scale",
+        description:
+          "Clean architectural boundaries let you expand features and handle higher traffic without rewrites.",
+      },
+      {
+        title: "Rapid Development Velocity",
+        description:
+          "Modern full-stack frameworks deliver working software faster with dependable release cycles.",
+      },
+    ],
+    relatedPortfolioSlugs: [
+      "templateza",
+      "rkf-distributors",
+    ],
+    diagramType: "saas",
+  },
+  {
+    id: "mobile-apps",
+    slug: "mobile-applications",
+    category: "it-solutions",
+    title: "Mobile Applications",
+    shortTitle: "Mobile Apps",
+    eyebrow: "IOS & ANDROID APPS",
+    headline: "User-Friendly Mobile Experiences That Scale",
+    heroSubheadline:
+      "We design and engineer high-performance cross-platform iOS and Android mobile apps from unified codebases—tailored for touch, smooth 60fps animations, and offline reliability.",
+    description:
+      "User-friendly mobile experiences designed to delight customers and accelerate your product adoption across iOS and Android.",
+    image: "/images/services/mobile-web.jpg",
+    highlights: [
+      "Cross-platform iOS and Android mobile applications",
+      "Native-grade 60fps touch gestures & smooth UI",
+      "Offline sync, push notifications & hardware integration",
+    ],
+    deliverables: [
+      "Cross-platform mobile app development (Flutter / React Native)",
+      "API integration with authentication & local state caching",
+      "Push notification workflows & background services",
+      "App Store & Google Play deployment readiness",
+    ],
+    techTags: ["React Native", "Flutter", "iOS", "Android", "API", "Cloud"],
+    biggerPictureEyebrow: "THE BIGGER PICTURE",
+    biggerPictureTitle: "Putting Your Business in Every Customer's Pocket",
+    biggerPictureBody:
+      "Great mobile applications feel instant and intuitive. We create mobile experiences with fluid gestures, offline-ready caching, and dependable cloud syncing so your users stay connected wherever they are.",
+    offeringsTitle: "What We Build",
+    offerings: [
+      {
+        title: "Cross-Platform Mobile Apps",
+        summary:
+          "Fluid iOS and Android mobile experiences engineered from unified codebases for faster launches and consistent performance.",
+        points: [
+          "Unified iOS and Android development from a single codebase",
+          "Tailored gesture navigation and fluid screen transitions",
+          "Responsive layout scaling across phone and tablet screens",
+        ],
+      },
+      {
+        title: "Offline Sync & Local Cache",
+        summary:
+          "Robust caching patterns allowing users to browse, draft, and queue actions even when offline.",
+        points: [
+          "Offline-aware data storage and background sync",
+          "Instant UI responsiveness even on spotty cellular connections",
+          "Optimized battery and memory consumption",
+        ],
+      },
+      {
+        title: "Push Notifications & Hardware",
+        summary:
+          "Engage users with timely alerts and utilize on-device capabilities securely.",
+        points: [
+          "Targeted push messaging via Firebase Cloud Messaging",
+          "Camera, geolocation, and biometric authentication support",
+          "Seamless deep linking from web and messaging channels",
+        ],
+      },
+      {
+        title: "Store Submission & Launch Support",
+        summary:
+          "Comprehensive store listing configuration, compliance validation, and ongoing release support.",
+        points: [
+          "App Store and Google Play guideline compliance review",
+          "Asset preparation, metadata optimization, and signing",
+          "Post-launch crash monitoring and update cycles",
+        ],
+      },
+    ],
+    advantages: [
+      {
+        title: "Cost-Effective Unified Code",
+        description:
+          "Launch on both iOS and Android simultaneously without doubling your budget or team overhead.",
+      },
+      {
+        title: "Delightful User Retention",
+        description:
+          "Fast startup times and intuitive touch ergonomics keep users returning to your app.",
+      },
+      {
+        title: "Secure Device Storage",
+        description:
+          "Encrypted local key storage and secure token transmission protect customer credentials.",
+      },
+      {
+        title: "Complete Lifecycle Support",
+        description:
+          "From initial design to App Store approval and version upgrades, we support you all the way.",
+      },
+    ],
+    relatedPortfolioSlugs: [
+      "magnify-creations",
+      "eva-glowing-skin",
+    ],
+    diagramType: "apps",
+  },
+  {
     id: "mobile-web",
     slug: "mobile-web-applications",
     category: "it-solutions",
@@ -223,8 +524,8 @@ export const CORE_SERVICES: ServiceItem[] = [
       },
     ],
     relatedPortfolioSlugs: [
-      "templateza",
-      "smart-business-software-solutions",
+      "rkf-distributors",
+      "dr-k-umashankar",
     ],
     diagramType: "saas",
   },
@@ -324,7 +625,7 @@ export const CORE_SERVICES: ServiceItem[] = [
     ],
     relatedPortfolioSlugs: [
       "rkf-distributors",
-      "smart-business-software-solutions",
+      "dr-k-umashankar",
     ],
     diagramType: "erp",
   },
@@ -423,8 +724,8 @@ export const CORE_SERVICES: ServiceItem[] = [
       },
     ],
     relatedPortfolioSlugs: [
-      "smart-business-software-solutions",
-      "scalable-mobile-app-solutions",
+      "rkf-distributors",
+      "ceylon-thamizhachi",
     ],
     diagramType: "cloud",
   },
@@ -623,10 +924,210 @@ export const CORE_SERVICES: ServiceItem[] = [
       },
     ],
     relatedPortfolioSlugs: [
-      "reliable-software-testing-services",
-      "scalable-mobile-app-solutions",
+      "rkf-distributors",
+      "eva-glowing-skin",
     ],
     diagramType: "qa",
+  },
+  {
+    id: "ui-ux-design",
+    slug: "ui-ux-design",
+    category: "creative",
+    title: "UI/UX Design",
+    shortTitle: "UI/UX",
+    eyebrow: "PRODUCT & INTERFACE DESIGN",
+    headline: "Intuitive Interfaces & Scalable Design Systems",
+    heroSubheadline:
+      "We design accessible, human-centered UI/UX interfaces and tokenized Figma design systems that turn complex digital products into effortless, high-converting customer experiences.",
+    description:
+      "User-centric wireframes, prototypes, and high-fidelity design systems built for effortless adoption and intuitive digital experiences.",
+    image: "/images/services/ui-ux-design.jpg",
+    highlights: [
+      "User-first wireframes, prototypes & design systems",
+      "Interactive Figma prototypes for rapid validation",
+      "Accessible, responsive tokenized component libraries",
+    ],
+    deliverables: [
+      "User journey mapping & information architecture",
+      "Interactive Figma wireframes & high-fidelity prototypes",
+      "Tokenized design system with light and dark mode specs",
+      "Clean engineering handoff documentation and developer notes",
+    ],
+    techTags: ["Figma", "Design Systems", "Prototypes", "Wireframing", "User Research"],
+    biggerPictureEyebrow: "THE BIGGER PICTURE",
+    biggerPictureTitle: "Designing for Clarity, Conversion & Effortless Usability",
+    biggerPictureBody:
+      "Great software feels effortless because every interaction has been deliberately considered. We eliminate visual clutter and cognitive friction so your customers accomplish their goals quickly with complete confidence.",
+    offeringsTitle: "What We Craft",
+    offerings: [
+      {
+        title: "UX Architecture & Wireframing",
+        summary:
+          "Simplify complex user flows and dashboard workflows through clear structural hierarchy.",
+        points: [
+          "User journey mapping & task completion optimization",
+          "Low- and mid-fidelity interactive wireframes",
+          "Navigation structures tuned for conversion and clarity",
+        ],
+      },
+      {
+        title: "High-Fidelity UI & Prototypes",
+        summary:
+          "Polished visual interfaces with realistic interactions, transitions, and micro-animations.",
+        points: [
+          "Production-ready Figma screen specs across all breakpoints",
+          "Clickable prototypes for client and stakeholder testing",
+          "Micro-interaction and motion design guidelines",
+        ],
+      },
+      {
+        title: "Scalable Design Systems",
+        summary:
+          "Modular token libraries that ensure visual consistency and speed up engineering velocity.",
+        points: [
+          "Reusable button, form, modal, and navigation components",
+          "Tokenized color, typography, elevation, and spacing scales",
+          "Direct mapping to Tailwind CSS and React component specs",
+        ],
+      },
+      {
+        title: "Usability Testing & Design Audits",
+        summary:
+          "Evaluate real customer interactions to identify friction and increase conversion rates.",
+        points: [
+          "Heuristic UX audits of existing applications and websites",
+          "WCAG accessibility contrast and keyboard navigation checks",
+          "Iterative usability feedback synthesis and recommendations",
+        ],
+      },
+    ],
+    advantages: [
+      {
+        title: "Higher Product Adoption",
+        description:
+          "Intuitive layouts and clear calls to action help new users onboard without confusion.",
+      },
+      {
+        title: "Faster Engineering Velocity",
+        description:
+          "Pre-built design tokens and specs eliminate developer guesswork during implementation.",
+      },
+      {
+        title: "Consistent Across Devices",
+        description:
+          "Responsive component rules guarantee a unified look from mobile screens to ultrawide monitors.",
+      },
+      {
+        title: "Built to Evolve",
+        description:
+          "Modular Figma systems allow your internal team to create new screens seamlessly as features grow.",
+      },
+    ],
+    relatedPortfolioSlugs: [
+      "templateza",
+      "magnify-creations",
+    ],
+    diagramType: "design",
+  },
+  {
+    id: "brand-identity",
+    slug: "brand-identity",
+    category: "creative",
+    title: "Brand Identity",
+    shortTitle: "Brand Identity",
+    eyebrow: "VISUAL SYSTEMS & STRATEGY",
+    headline: "Distinct Visual Identities & Brand Guidelines",
+    heroSubheadline:
+      "We shape memorable brand strategies, cohesive logo systems, color palettes, and brand guidelines that make your company unmistakable in competitive markets.",
+    description:
+      "Distinct logo marks, typography systems, and cohesive brand guidelines that make your company unmistakable in competitive markets.",
+    image: "/images/services/ui-ux-design.jpg",
+    highlights: [
+      "Consistent visual identity & brand guidelines",
+      "Custom logo systems, monograms & typography scales",
+      "Digital, social, and print marketing collateral kits",
+    ],
+    deliverables: [
+      "Brand positioning & creative direction strategy",
+      "Vector logo suite (primary, icon, monochrome lockups)",
+      "Curated typography pairings & brand color token palette",
+      "Comprehensive brand guidelines book & social media starter pack",
+    ],
+    techTags: ["Logo Design", "Typography", "Styleguide", "Vector Systems", "Brand Kits"],
+    biggerPictureEyebrow: "THE BIGGER PICTURE",
+    biggerPictureTitle: "Building an Unmistakable Presence That Commands Trust",
+    biggerPictureBody:
+      "Your brand is more than a logo—it is the lasting emotional impression your company leaves across every customer touchpoint. We craft visual identities with timeless distinction so your business stands out effortlessly.",
+    offeringsTitle: "What We Craft",
+    offerings: [
+      {
+        title: "Brand Strategy & Positioning",
+        summary:
+          "Define what makes your company stand apart through clear audience alignment and market positioning.",
+        points: [
+          "Audience persona mapping & competitor visual landscape audits",
+          "Core brand personality, messaging pillars & tone of voice",
+          "Clear creative direction guiding all future design assets",
+        ],
+      },
+      {
+        title: "Logo Systems & Monograms",
+        summary:
+          "Versatile, scalable vector logo assets engineered for digital screens, merchandise, and print.",
+        points: [
+          "Primary horizontal, vertical, and compact icon marks",
+          "Light, dark, and monochrome inverted asset suites",
+          "Export packages in SVG, PNG, PDF, and EPS formats",
+        ],
+      },
+      {
+        title: "Color & Typography Systems",
+        summary:
+          "Harmonious color palettes and complementary font pairings that create visual resonance.",
+        points: [
+          "Primary, accent, and neutral palette tokens with contrast validation",
+          "Web font hierarchy specs for headings, body, and mono data",
+          "Digital accessibility compliance for legibility on all backgrounds",
+        ],
+      },
+      {
+        title: "Brand Guidelines & Collateral",
+        summary:
+          "Actionable rulebooks and versatile templates empowering your marketing team to maintain consistency.",
+        points: [
+          "Complete brand styleguide documenting logo clear space and misuse rules",
+          "Social media post and story templates in Figma",
+          "Business stationery, email signatures, and presentation slide decks",
+        ],
+      },
+    ],
+    advantages: [
+      {
+        title: "Instant Market Credibility",
+        description:
+          "A polished visual presentation signals established authority and quality from the very first impression.",
+      },
+      {
+        title: "Cohesive Across All Channels",
+        description:
+          "Your website, pitch decks, social presence, and print collateral speak with one unified voice.",
+      },
+      {
+        title: "Clear Rules for Growth",
+        description:
+          "Straightforward guidelines ensure future team members and external partners stay strictly on-brand.",
+      },
+      {
+        title: "Ready for Production",
+        description:
+          "Organized vector asset packages ready for immediate use by developers, printers, and marketers.",
+      },
+    ],
+    relatedPortfolioSlugs: [
+      "jenthu-nail-and-bridal",
+      "ceylon-thamizhachi",
+    ],
+    diagramType: "design",
   },
   {
     id: "ui-ux",

@@ -239,11 +239,11 @@ export function ProcessTimelineSection() {
   };
 
   return (
-    <section className="relative overflow-x-clip bg-white py-14 sm:py-20">
+    <section className="relative overflow-x-clip bg-white pt-8 pb-2 sm:pt-10 sm:pb-4">
       <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-10 2xl:max-w-[1560px]">
         <div className="text-center">
           <Eyebrow label="TRANSPARENT WORKFLOW" />
-          <h2 className="mt-5 text-3xl font-medium tracking-[-0.03em] text-[#0f0b24] sm:text-4xl">
+          <h2 className="mt-3 text-3xl font-medium tracking-[-0.03em] text-[#0f0b24] sm:text-4xl">
             How Every Project Moves Forward
           </h2>
         </div>
